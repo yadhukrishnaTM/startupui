@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:startupui/pages/widget/Default_method.dart';
 import 'package:startupui/pages/widget/Progress_bar.dart';
+import 'package:startupui/pages/widget/chip_widget.dart';
 import 'package:startupui/pages/widget/payment_overview.dart';
 import 'package:startupui/pages/widget/payment_profile.dart';
 import 'package:startupui/pages/widget/payment_widget.dart';
+import 'package:startupui/pages/widget/transactions.dart';
 
 import '../color/colors.dart';
 
@@ -30,33 +32,47 @@ class Payment extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Progress_bar(),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Progress_bar(),
+              SizedBox(height: 10,),
 
-            Default_method(),
-            Payment_profile(),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Divider(thickness: 3, color: ColorConstant.mainWhite),
-            ),
-            Payment_overview(),
-            Payment_Card()
+              Default_method(),
+              SizedBox(height: 10,),
+              Payment_profile(),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Divider(thickness: 3, color: ColorConstant.mainWhite),
+              ),
+              SizedBox(height: 10,),
+              Payment_overview(),
+
+              SizedBox(height: 10,),
+              Payment_Card(),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                'Transactions',
+                style: TextStyle(
+                    fontSize: 16, fontWeight: FontWeight.bold,),
+              ),
+              Chip_widget(),
+              SizedBox(height: 10,),
+              Transactions(),
 
 
 
-          ],
+
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Text text1() {
-    return Text(
-      'Transactions',
-      style: TextStyle(
-          fontSize: 16, fontWeight: FontWeight.bold),
-    );
+
   }
-}
