@@ -7,7 +7,10 @@ import 'package:startupui/pages/widget/payment_profile.dart';
 import 'package:startupui/pages/widget/payment_widget.dart';
 import 'package:startupui/pages/widget/transactions.dart';
 
-import '../color/colors.dart';
+
+import '../consts/colors.dart';
+
+
 
 class Payment extends StatelessWidget {
   const Payment ({Key? key}) : super(key: key);
@@ -43,6 +46,7 @@ class Payment extends StatelessWidget {
               Default_method(),
               SizedBox(height: 10,),
               Payment_profile(),
+              SizedBox(height: 10,),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: Divider(thickness: 3, color: ColorConstant.mainWhite),
@@ -63,8 +67,6 @@ class Payment extends StatelessWidget {
               Chip_widget(),
               SizedBox(height: 10,),
               Transactions(),
-
-
 
 
             ],

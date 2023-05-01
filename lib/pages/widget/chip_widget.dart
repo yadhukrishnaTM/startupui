@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../color/colors.dart';
+import '../../consts/colors.dart';
+
+
 
 class Chip_widget extends StatelessWidget {
   const Chip_widget({Key? key}) : super(key: key);

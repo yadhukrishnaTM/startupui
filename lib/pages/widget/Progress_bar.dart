@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:linear_progress_bar/linear_progress_bar.dart';
 
-import '../../color/colors.dart';
+
+import '../../consts/colors.dart';
+
 
 
 class Progress_bar extends StatelessWidget {
