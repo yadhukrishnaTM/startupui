@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import '../../consts/colors.dart';
 
 
-
-
-
 class Transactions extends StatelessWidget {
   //Transactions({Key? key}) : super(key: key);
   List<String>images = [

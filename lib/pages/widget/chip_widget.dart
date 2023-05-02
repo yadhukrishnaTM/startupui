@@ -1,54 +1,30 @@
 import 'package:flutter/material.dart';
 
-import '../../consts/colors.dart';
-
-
-
 class Chip_widget extends StatelessWidget {
-  const Chip_widget({Key? key}) : super(key: key);
+  const Chip_widget({
+    required this.tittle2,
+    required this.colr,
+    required this.colr1
+  });
+
+  final String tittle2;
+  final  colr;
+  final  colr1;
+
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            color: ColorConstant.mainWhite,
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-          ),
-          height: 30,
-          width: 100,
-          child: Center(
-            child: Text("On hold",
-                style: TextStyle(color: Colors.grey)),
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-            color: ColorConstant.mainBlue,
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-          ),
-          height: 30,
-          width: 100,
-          child: Center(
-            child: Text("Payouts(15)",
-                style: TextStyle(color: Colors.white)),
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-            color: ColorConstant.mainWhite,
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-          ),
-          height: 30,
-          width: 100,
-          child: Center(
-            child: Text("Refunds",
-                style: TextStyle(color: Colors.grey)),
-          ),
-        ),
-      ],
+    return Container(
+      decoration: BoxDecoration(
+        color: colr1,
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
+      height: 30,
+      width: 100,
+      child: Center(
+        child: Text(tittle2,
+            style: TextStyle(color: colr)),
+      ),
     );
   }
 }

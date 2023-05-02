@@ -1,26 +1,40 @@
 import 'package:flutter/material.dart';
 
+import '../../consts/colors.dart';
+
 class Default_method extends StatelessWidget {
-  const Default_method({Key? key}) : super(key: key);
+  const Default_method({
+    required this.tittle,
+    required this.sub_tittle,
+    super.key,
+  });
+
+  final String tittle;
+  final String sub_tittle;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text('Default Method', style: TextStyle(fontSize: 14)),
-          Row(
-            children: [
-              Text('Online Payment',
-                  style: TextStyle(fontSize: 12, color: Colors.grey)),
-              Icon(
-                Icons.arrow_forward_ios_rounded,
-                color: Colors.grey,
-                size: 12,
-              )
-            ],
-          ),
-        ]
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          tittle,
+          style: TextStyle(fontSize: 14, color: ColorConstant.mainBlack),
+        ),
+        Row(
+          children: [
+            Text(
+              sub_tittle,
+              style: TextStyle(fontSize: 12, color: Colors.grey),
+            ),
+            const Icon(
+              Icons.arrow_forward_ios_sharp,
+              size: 12,
+              color: Colors.grey,
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

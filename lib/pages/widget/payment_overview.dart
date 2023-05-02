@@ -1,26 +1,36 @@
 import 'package:flutter/material.dart';
 
 class Payment_overview extends StatelessWidget {
-  const Payment_overview({Key? key}) : super(key: key);
+  const Payment_overview({
+    required this.tittle1,
+    required this.sub_tittle1,
+    super.key,
+  });
+
+  final String tittle1;
+  final String sub_tittle1;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text('Payment Overview', style: TextStyle(fontSize: 14)),
-          Row(
-            children: [
-              Text('Life Time',
-                  style: TextStyle(fontSize: 12, color: Colors.grey)),
-              Icon(
-                Icons.keyboard_arrow_down_outlined,
-                color: Colors.grey,
-                size: 20,
-              )
-            ],
-          ),
-        ]
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          tittle1,
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        ),
+        Row(
+          children: [
+            Text(sub_tittle1,
+                style: TextStyle(fontSize: 12, color: Colors.grey)),
+            Icon(
+              Icons.arrow_downward_rounded,
+              color: Colors.grey,
+              size: 12,
+            )
+          ],
+        )
+      ],
     );
   }
 }
